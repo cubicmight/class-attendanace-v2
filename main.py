@@ -21,6 +21,7 @@ def print_dictionary():
         key_2 = dictx[key]
         for key_3 in key_2:
             print("\t%s was %s" % (key_3, key_2[key_3]))
+  
 
 
 def view_attendance():
@@ -43,6 +44,7 @@ def add_student_names():
     print_dictionary()
     time.sleep(5)
     print("\n")
+    save_file(dictx)
 
 
 def take_attendance():
@@ -71,6 +73,7 @@ def take_attendance():
     else:
         print("That student is not in the system. \n")
         time.sleep(5)
+    save_file(dictx)
 
 def delete_all():
     global dictx
@@ -79,6 +82,7 @@ def delete_all():
     dictx['wednesday'] = {}
     dictx['thursday'] = {}
     dictx['friday'] = {}
+    save_file(dictx)
 
 
 def change_name():
@@ -111,6 +115,7 @@ def change_name():
     else:
         print("\nThere is no student with that name in your attendance. \n")
         time.sleep(5)
+    save_file(dictx)
 
 
 def save_file(save_dictx):
@@ -160,7 +165,7 @@ def main_menu_display():
     menu.append_item(three)
     menu.append_item(four)
     menu.append_item(five)
-  menu.append_item(six)
+    menu.append_item(six)
     menu.show()
 save_file(dictx)
 
