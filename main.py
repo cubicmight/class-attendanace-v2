@@ -41,7 +41,7 @@ def add_student_names():
     dictx['friday'][input_name.upper()] = "Status"
     print("Your class is: ")
     print_dictionary()
-    time.sleep(5)
+    time.sleep(5.5)
     print("\n")
 
 
